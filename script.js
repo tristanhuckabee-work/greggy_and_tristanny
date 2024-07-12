@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-    let copyButton = document.querySelector('#copy-button');
-    copyButton.addEventListener('click', () => {
+    let copyDiv = document.querySelector('#button--copy');
+    copyDiv.addEventListener('click', () => {
+        alert("Url copied!")
         navigator.clipboard.writeText(window.location.href);
     });
 })

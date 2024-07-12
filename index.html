@@ -1,11 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ac20bc98b6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./index.css">
+    <script src="./script.js"></script>
     <title>Document</title>
 </head>
+
 <body>
-    
+    <div id="left">
+        <div id="button--copy"><i class="fa-solid fa-link fa-2x" id="button--copy"></i></div>
+        <div id="button--twitter"><i class="fa-brands fa-x-twitter fa-2x"></i></div>
+        <div id="button--facebook"> <a
+                href="https://www.facebook.com/sharer/sharer.php?u=https://codedex.notion.site/Track-2-Brooklyn-Stoop-Sale-01895caec65548f4bdf21d6dd7144ef2"
+                target="_blank"><i class="fa-brands fa-facebook-f fa-2x"></i></a></div>
+
+    </div>
+    <div id="center">
+        <h1>Stoop Sale</h1>
+        <h2>July 27th 10 AM to 2 PM</h2>
+        <p class="main-text">🛍️Here are some of the things we'll be selling:</p>
+        <ul>
+            <li>👕clothes</li>
+            <li>💐home goods</li>
+            <li>👠shoes</li>
+            <li>🎎 tchotchkes</li>
+        </ul>
+        <h2>2nd Pl. & Court St. Brooklyn</h2>
+    </div>
+    <div id="right"><img src="./stoopSale.jpg" id="map">
+
+    </div>
 </body>
+
+<script>
+    document.getElementById('button--twitter').addEventListener('click', function () {
+        const urlToShare = encodeURIComponent(window.location.href);
+        const tweetText = 'Check out this stoop sale!';
+        const twitterUrl = `https://twitter.com/intent/tweet?url=${urlToShare}&text=${tweetText}`;
+        window.open(twitterUrl, '_blank');
+    });
+</script>
+
 </html>
